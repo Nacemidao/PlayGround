@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><meta name="theme-color" content="#101611"><title>Yitik Taç — Zindan Avı</title><link rel="icon" href="data:,"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="game" aria-label="Yitik Taç oyun alanı">
+  <canvas id="world"></canvas>
+  <div class="vignette"></div>
+  <header class="topbar">
+    <div class="brand"><div class="brand-mark">✦</div><div><div class="brand-name">YİTİK TAÇ</div><div class="brand-sub">KÜL VE YANKI</div></div></div>
+    <div class="run-info"><span class="live-dot"></span><span id="zoneName">KÜL ORMANI</span><i></i><span id="floorName">KAT 01</span><i></i><span id="clock">00:00</span></div>
+    <button class="icon-btn pause-btn" id="pauseBtn" aria-label="Duraklat">Ⅱ</button>
+  </header>
+  <section class="hud-left">
+    <div class="portrait"><span>⚔</span><b>18</b></div><div class="vitals"><div class="player-name">SÜRGÜN <span>• SEVİYE 18</span></div><div class="bar hp"><div id="hpFill"></div><span id="hpText">248 / 248</span></div><div class="bar mp"><div id="mpFill"></div><span id="mpText">86 / 86</span></div><div class="xp-row"><div class="xp-track"><div id="xpFill"></div></div><span id="xpText">%64</span></div></div>
+  </section>
+  <aside class="hud-right"><div class="minimap-card"><div class="map-label">BÖLGE HARİTASI <span>● CANLI</span></div><canvas id="minimap" width="168" height="112"></canvas></div><button class="quest-peek" id="questPeek"><span class="quest-symbol">◇</span><span><b>AV GÖREVİ</b><small id="questSummary">5 / 12 Kül Kurdu</small></span><span class="quest-arrow">↗</span></button></aside>
+  <div class="loot-feed" id="lootFeed"></div>
+  <div class="bottom-left"><div class="orb-wrap"><div class="orb red"><div id="orbHp"></div><span>✦</span></div><div class="orb-caption">SAĞLIK</div></div><button class="quick-potion" id="potionBtn"><span>⚗</span><b id="potionCount">3</b><small>İÇ</small></button><div class="orb-wrap mana-wrap"><div class="orb blue"><div id="orbMp"></div><span>✧</span></div><div class="orb-caption">MANA</div></div></div>
+  <div class="bottom-center"><div class="wave-pill"><span>✦</span> DALGA <b id="waveNum">03</b><i></i> DÜŞMAN <b id="enemyCount">08</b></div><div class="mastery-mini"><span>⚔</span> KILIÇ USTALIĞI <div class="mastery-line"><i id="masteryFill"></i></div><b id="masteryText">%72</b></div></div>
+  <div class="combat-cluster"><div class="skill-charge" id="chargeText">HAZIR</div><button class="skill-btn dodge" id="dodgeBtn"><span>➤</span><small>SIÇRA</small><kbd>Ⅱ</kbd></button><button class="skill-btn skill" id="skillBtn"><span>✧</span><small>AY IŞINI</small><div class="cooldown" id="skillCooldown"></div><kbd>Q</kbd></button><button class="skill-btn attack" id="attackBtn"><span>⚔</span><small>SALDIR</small><kbd>●</kbd></button></div>
+  <div class="joystick" id="joystick"><div class="joy-ring"><div class="joy-knob" id="joyKnob"><span>✦</span></div></div><small>HAREKET</small></div>
+  <nav class="bottom-nav"><button data-panel="bag"><span>▣</span>ÇANTA</button><button data-panel="skills"><span>⌘</span>YETENEK</button><button data-panel="craft"><span>⚒</span>ÜRETİM</button><button data-panel="map"><span>⌖</span>HARİTA</button></nav>
+  <div class="toast" id="toast"></div>
+  <div class="panel-scrim" id="scrim"><section class="panel" id="panel"><button class="close-panel" id="closePanel">×</button><div id="panelContent"></div></section></div>
+  <div class="level-flash" id="levelFlash"><div>✦</div><span>SEVİYE YÜKSELDİ</span><b>19</b><small>YENİ BİR YOL AÇILDI</small></div>
+  <div class="screen-flash" id="screenFlash"></div>
+</main><script src="game.js"></script>
+</body></html>
